@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Main menu', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+        title: const Text('TE-Jzon_reAPI', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true, // Judul di tengah
         backgroundColor: const Color(0xFF615EFC), 
       ),
@@ -32,7 +32,7 @@ class MainScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
-              width: double.infinity,
+              width: 200,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: ElevatedButton(
@@ -42,13 +42,13 @@ class MainScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => FirstPage()),
                     );
                   },
-                  child: const Text('Halaman GETO'),
+                  child: const Text('GETO'),
                 ),
               ),
             ),
             const SizedBox(height: 20),
             SizedBox(
-              width: double.infinity,
+              width: 200,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: ElevatedButton(
@@ -58,13 +58,13 @@ class MainScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => const PostPage()),
                     );
                   },
-                  child: const Text('Halaman POST'),
+                  child: const Text('POST'),
                 ),
               ),
             ),
             const SizedBox(height: 20),
             SizedBox(
-              width: double.infinity,
+              width: 200,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: ElevatedButton(
@@ -74,7 +74,7 @@ class MainScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => AddAndDeleteScreen()),
                     );
                   },
-                  child: const Text('Halaman PUT & DELETE'),
+                  child: const Text('PUT & DELETE'),
                 ),
               ),
             ),

@@ -13,13 +13,13 @@ class _AddAndDeleteScreenState extends State<AddAndDeleteScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Edit and Delete'),
+        title: const Text('Edit and Delete'),
       ),
       body: FutureBuilder<List<Todo>>(
         future: _todoService.fetchTodos(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else {
@@ -61,17 +61,17 @@ class _AddAndDeleteScreenState extends State<AddAndDeleteScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Edit Todo'),
+          title: const Text('Edit Todo'),
           content: TextField(
             controller: titleController,
-            decoration: InputDecoration(labelText: 'Title'),
+            decoration: const InputDecoration(labelText: 'Title'),
           ),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             TextButton(
               onPressed: () async {
@@ -85,7 +85,7 @@ class _AddAndDeleteScreenState extends State<AddAndDeleteScreen> {
                   ));
                 }
               },
-              child: Text('Save'),
+              child: const Text('Save'),
             ),
           ],
         );
@@ -109,11 +109,11 @@ class TodoActions extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         IconButton(
-          icon: Icon(Icons.delete),
+          icon: const Icon(Icons.delete),
           onPressed: onDelete,
         ),
         IconButton(
-          icon: Icon(Icons.edit),
+          icon: const Icon(Icons.edit),
           onPressed: onEdit,
         ),
       ],

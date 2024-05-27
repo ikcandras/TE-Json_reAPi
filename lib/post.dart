@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Material App',
       home: PostPage(),
     );
@@ -62,7 +62,7 @@ class _PostPageState extends State<PostPage> {
           final post = postResults[index];
           return Card(
             child: ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 child: Icon(Icons.person),
               ),
               title: Text(post.name),

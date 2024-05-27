@@ -22,11 +22,11 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Main menu'),
+        title: const Text('Main menu', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
         centerTitle: true, // Judul di tengah
-        backgroundColor: Color(0xFFB39DDB), // Warna ungu pastel lembut
+        backgroundColor: const Color(0xFF615EFC), 
       ),
-      backgroundColor: Color(0xFFF3E5F5), // Warna latar belakang ungu pastel
+      backgroundColor: const Color(0xFFEEEEEE), 
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -42,11 +42,11 @@ class MainScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => FirstPage()),
                     );
                   },
-                  child: Text('Halaman GET'),
+                  child: const Text('Halaman GET'),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
               child: Padding(
@@ -55,14 +55,14 @@ class MainScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PostPage()),
+                      MaterialPageRoute(builder: (context) => const PostPage()),
                     );
                   },
-                  child: Text('Halaman POST'),
+                  child: const Text('Halaman POST'),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
               child: Padding(
@@ -74,7 +74,7 @@ class MainScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => AddAndDeleteScreen()),
                     );
                   },
-                  child: Text('Halaman PUT & DELETE'),
+                  child: const Text('Halaman PUT & DELETE'),
                 ),
               ),
             ),
@@ -88,6 +88,6 @@ class MainScreen extends StatelessWidget {
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HomePageStateful();
+    return const HomePageStateful();
   }
 }

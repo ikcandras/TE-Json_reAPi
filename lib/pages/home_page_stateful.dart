@@ -28,7 +28,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Exam TE-Jzon_reAPI'),
+        title: const Text('Exam TE-Jzon_reAPI'),
       ),
       body: ListView.builder(
         itemCount: users.length,

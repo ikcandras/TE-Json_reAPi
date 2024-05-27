@@ -42,7 +42,7 @@ class MainScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => FirstPage()),
                     );
                   },
-                  child: const Text('Halaman GET'),
+                  child: const Text('Halaman GETO'),
                 ),
               ),
             ),

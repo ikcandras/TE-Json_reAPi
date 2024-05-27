@@ -28,7 +28,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Exam rest API dan JSON Evan'),
+        title: Text('Exam TE-Jzon_reAPI'),
       ),
       body: ListView.builder(
         itemCount: users.length,
@@ -40,7 +40,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
                   ? CircleAvatar(
                       backgroundImage: NetworkImage(user.profile_image),
                     )
-                  : CircleAvatar(
+                  : const CircleAvatar(
                       child: Icon(Icons.person),
                     ),
               title: Text(user.employee_name),
